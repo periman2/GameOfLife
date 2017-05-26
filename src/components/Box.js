@@ -3,11 +3,11 @@ var React = require("react");
 class Box extends React.Component {
     render() {
         var boxStyle = {
-            width: '20px',
-            height: '20px'
+            width: '15px',
+            height: '15px'
         }
         if(this.props.isAlive){
-            boxStyle.backgroundColor = '#dbd15c';
+            boxStyle.backgroundColor = '#4a96bf';
         } else {
             boxStyle.backgroundColor = '#454545';
         }
