@@ -1,0 +1,20 @@
+body {
+    background: #f5e2d1;
+}
+
+td {
+    border: none;
+}
+
+tr {
+    border: none;
+}
+
+table {
+    border: none;
+    border-collapse: collapse;
+}
+
+div {
+    border: none;
+}
