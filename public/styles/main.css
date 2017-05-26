@@ -7,10 +7,17 @@ td {
 }
 
 table {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 80px;
     border: none;
     border-collapse: collapse;
 }
 
 div {
     border: none;
+}
+
+h3 {
+    color: white;
 }

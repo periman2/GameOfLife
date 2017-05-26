@@ -6,7 +6,9 @@ class Box extends React.Component {
             width: '15px',
             height: '15px'
         }
-        if(this.props.isAlive){
+        if(this.props.isAlive.alive && !this.props.isAlive.old){
+            boxStyle.backgroundColor = '#c3dcea';
+        } else if (this.props.isAlive.alive && this.props.isAlive.old) {
             boxStyle.backgroundColor = '#4a96bf';
         } else {
             boxStyle.backgroundColor = '#454545';
