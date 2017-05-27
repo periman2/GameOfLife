@@ -15,7 +15,7 @@ class Game extends React.Component {
             rows: 20,
             Boxes: boxes,
             generation: 0,
-            speed: 1
+            speed: 0.5
         }
         this.started = false;
         this.handleChangeColumns = this.handleChangeColumns.bind(this);
@@ -25,13 +25,36 @@ class Game extends React.Component {
         this.handleNextBtnClick = this.handleNextBtnClick.bind(this);
         this.handleStartBtnClick = this.handleStartBtnClick.bind(this);
         this.handlePauseBtnClick = this.handlePauseBtnClick.bind(this);
+        this.handleChangeOfSpeed = this.handleChangeOfSpeed.bind(this);
         this.checkIfAlive = this.checkIfAlive.bind(this);
         this.findAliveNeighborsNumber = this.findAliveNeighborsNumber.bind(this);
         this.checkForholocaust = this.checkForHolocaust.bind(this);
         this.handleClearAll = this.handleClearAll.bind(this);
         this.initiateBoxes = this.initiateBoxes.bind(this);
         this.updateBoxes = this.updateBoxes.bind(this);
+        this.randomize = this.randomize.bind(this);
         this.loop = null;
+    }
+    componentDidMount(){
+        this.randomize();
+    }
+    handleChangeOfSpeed(ev){
+        console.log(ev.target.value)
+        var speed = ev.target.value;
+        if(speed >= 0.1 && speed < 10){
+            this.setState(function(prevState){
+                var state = {}
+                state.speed = speed;
+                console.log(this.loop);
+                if(this.started){
+                    if(this.loop !== null){
+                        clearInterval(this.loop);
+                    }                
+                    this.loop = setInterval(this.updateBoxes, speed * 1000);
+                }
+                return state;
+            });
+        }
     }
     handleChangeColumns(ev){
         var columnsNum = ev.target.value;
@@ -55,6 +78,25 @@ class Game extends React.Component {
         this.setState({
             Boxes: boxes, started: false, generation: 0
         })
+        if(this.loop !== null){
+            clearInterval(this.loop);
+        }
+    }
+    randomize(){
+        var boxes = {};
+        var boxesNumber = this.state.columns * this.state.rows;
+
+        var dead= false;
+        for(var i = 1; i <= boxesNumber; i ++) {
+            var rand = Math.random();
+            if(rand > 0.5){
+                dead = true;
+            } else {
+                dead = false;
+            }
+            boxes[i] = {alive: dead, neighbors: 0, old: false};
+        }
+        this.setState({Boxes: boxes})
     }
     initiateBoxes(dim, num){
         var boxes = {};
@@ -96,6 +138,7 @@ class Game extends React.Component {
         this.loop = setInterval(this.updateBoxes, this.state.speed * 1000);
     }
     handlePauseBtnClick(){
+        console.log("im in the pause button", this.started);
         if(this.started){
             clearInterval(this.loop);
             this.started = false;
@@ -229,7 +272,7 @@ class Game extends React.Component {
         return false;
     }
     render() {
-        console.log(this.state);
+        // console.log(this.state);
         return (
             <div>
                 <Options 
@@ -237,12 +280,14 @@ class Game extends React.Component {
                 onClickNexttBtn={this.handleNextBtnClick}
                 onClickPauseBtn={this.handlePauseBtnClick}
                 onClickClearBtn={this.handleClearAll}
+                onClickRandomBtn={this.randomize}
+                onChangeDuration={this.handleChangeOfSpeed}
                 onChangeColumnNumber={this.handleChangeColumns} 
                 onChangeRowsNumber={this.handleChangeRows}/>
                 <Grid generation={this.state.generation} 
                 Boxes={this.state.Boxes} 
                 onBoxClick={this.handleBoxClick} 
-                columns={this.state.columns} 
+                dimentions={{columns:this.state.columns, rows: this.state.rows}} 
                 rows={this.state.rows}/>
             </div>
         )

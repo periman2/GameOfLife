@@ -3,17 +3,26 @@ var React = require("react");
 class Options extends React.Component {
     render() {
         return (
-            <div>
-                <h3>Columns:</h3>
-                <input placeholder="Number of columns" defaultValue='10' onChange={this.props.onChangeColumnNumber} type="number" name="columns" required/>
-                <h3>Rows:</h3>
-                <input placeholder="Number of rows" defaultValue='10' onChange={this.props.onChangeRowsNumber} type="number" name="rows" required/>
-                <h3>Interval between Generations(in s):</h3>
-                <input placeholder="Duration of Generations (in s)" defaultValue='0.5' onChange={this.props.onChangeDuration} type="number" name="duration" required/>
-                <button name='start' onClick={this.props.onClickStartBtn}>Start Evolution</button>
-                <button name='next' onClick={this.props.onClickNexttBtn}>Next Generation</button>
-                <button name='pause' onClick={this.props.onClickPauseBtn} >Pause</button>
-                <button name='clear' onClick={this.props.onClickClearBtn} >Clear</button>
+            <div className="Options">
+                <div className="dimCol">
+                    <h3>Columns:</h3>
+                    <input placeholder="Number of columns" defaultValue='20' onChange={this.props.onChangeColumnNumber} type="number" name="columns" autofocus required/> 
+                </div>
+                <div className="dimRow">
+                    <h3>Rows:</h3>
+                    <input placeholder="Number of rows" defaultValue='20' onChange={this.props.onChangeRowsNumber} type="number" name="rows" required/> 
+                </div>
+                <div className="intSettings">
+                    <h3>Interval(in s):</h3>
+                    <input placeholder="Duration of Generations (in s)" defaultValue='0.5' onChange={this.props.onChangeDuration} type="number" name="duration" required/> 
+                </div>
+                <div className="btnSettings">
+                    <button name='start' onClick={this.props.onClickStartBtn}>Start</button>
+                    <button name='next' onClick={this.props.onClickNexttBtn}>Next Gen</button>
+                    <button name='pause' onClick={this.props.onClickPauseBtn} >Pause</button>
+                    <button name='clear' onClick={this.props.onClickClearBtn} >Clear</button>
+                    <button name='random' onClick={this.props.onClickRandomBtn} >Randomize</button>
+                </div>
             </div>
         )
     }
