@@ -28,8 +28,8 @@ class Grid extends React.Component {
             )
         }
         return(
-            <div>
-                <table>
+            <div >
+                <table >
                     <tbody>
                         {rows}
                     </tbody>
