@@ -275,6 +275,7 @@ class Game extends React.Component {
         // console.log(this.state);
         return (
             <div>
+                <h1 className="title">Game of Life (in React.js)</h1>
                 <Options 
                 onClickStartBtn={this.handleStartBtnClick} 
                 onClickNexttBtn={this.handleNextBtnClick}

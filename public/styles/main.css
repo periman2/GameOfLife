@@ -7,6 +7,10 @@ body {
     text-align: center;
 }
 
+h1 {
+    font-weight: bold;
+}
+
 td {
     border: none;
 }
@@ -14,23 +18,31 @@ td {
 table {
     margin-left: auto;
     margin-right: auto;
-    margin-top: 10px;
-    margin-bottom: 10px;
     border: none;
     border-collapse: collapse;
 }
 
-.gen {
+.gen{
     color: #bdbdbd;
     font-family: 'Droid Sans Mono', monospace;
     font-size: 15px;
     font-weight: bold;
+}
+
+.title {
+    color: #bdbdbd;
+    font-family: 'Droid Sans Mono', monospace;
+    font-size: 25px;
+    font-weight: bold;
     margin-left: 0;
+}
+
+a {
+    color: #362c2c;
 }
 
 .btnSettings {
     width: 70%;
-    margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -40,9 +52,8 @@ table {
     border-radius: 1em;
     font-family: 'Droid Sans Mono', monospace;
     display: inline-block;
-    width: 70%;
+    width: 60%;
     margin-top: 10px;
-    padding-bottom:15px;
     -webkit-box-shadow: inset -1px -1px 5px 6px rgba(0,0,0,1);
     -moz-box-shadow: inset -1px -1px 5px 6px rgba(0,0,0,1);
     box-shadow: inset -1px -1px 5px 6px rgba(0,0,0,1);
