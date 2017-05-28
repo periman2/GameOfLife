@@ -9,7 +9,7 @@ class Box extends React.Component {
         } else {
             biggestDimention = rows;
         }
-        var dimention = 5 + 400 / biggestDimention + "px";
+        var dimention = 1 + 4 / biggestDimention + "em";
         var boxStyle = {
             width: dimention,
             height: dimention,

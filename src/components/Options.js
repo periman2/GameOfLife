@@ -6,7 +6,7 @@ class Options extends React.Component {
             <div className="Options">
                 <div className="dimCol">
                     <h3>Columns:</h3>
-                    <input placeholder="Number of columns" defaultValue='20' onChange={this.props.onChangeColumnNumber} type="number" name="columns" autofocus required/> 
+                    <input placeholder="Number of columns" defaultValue='20' onChange={this.props.onChangeColumnNumber} type="number" name="columns" autoFocus required/> 
                 </div>
                 <div className="dimRow">
                     <h3>Rows:</h3>

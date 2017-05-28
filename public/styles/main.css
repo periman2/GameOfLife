@@ -37,6 +37,9 @@ table {
     margin-left: 0;
 }
 
+h4 {
+    font-size: 1.1vw;
+}
 a {
     color: #362c2c;
 }
@@ -61,7 +64,7 @@ a {
 
 /*Input styling*/
 .Options input {
-    font-size: 18px;
+    font-size: 1.2vw;
     background: transparent;
     width: 30%;
     text-align: center;
@@ -72,7 +75,7 @@ a {
 }
 
 .Options h3 {
-    font-size: 21px;
+    font-size: 1.4vw;
     color: #130606
 }
 
@@ -83,7 +86,7 @@ a {
     padding: 0 15px;
     border-radius: 0.2em;
     font-family: 'Droid Sans Mono', monospace;
-    font-size: 20px;
+    font-size: 1.4vw;
     font-weight: bold;
 }
 
