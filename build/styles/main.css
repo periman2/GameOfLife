@@ -1,0 +1,120 @@
+html {
+    height: 100%;
+    color: #362c2c;
+}
+body {
+    background: #090909;
+    text-align: center;
+}
+
+h1 {
+    font-weight: bold;
+}
+
+td {
+    border: none;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    border-collapse: collapse;
+}
+
+.gen{
+    color: #bdbdbd;
+    font-family: 'Droid Sans Mono', monospace;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.title {
+    color: #bdbdbd;
+    font-family: 'Droid Sans Mono', monospace;
+    font-size: 25px;
+    font-weight: bold;
+    margin-left: 0;
+}
+
+h4 {
+    font-size: 1.1vw;
+}
+a {
+    color: #362c2c;
+}
+
+.btnSettings {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.Options {
+    background:#b0b0b0;
+    border-radius: 1em;
+    font-family: 'Droid Sans Mono', monospace;
+    display: inline-block;
+    width: 85%;
+    margin-top: 10px;
+    -webkit-box-shadow: inset -1px -1px 5px 6px rgba(0,0,0,1);
+    -moz-box-shadow: inset -1px -1px 5px 6px rgba(0,0,0,1);
+    box-shadow: inset -1px -1px 5px 6px rgba(0,0,0,1);
+}
+
+/*Input styling*/
+.Options input {
+    font-size: 1.2vw;
+    background: transparent;
+    width: 30%;
+    text-align: center;
+    border: none;
+    border-bottom: 3px solid #3b3b3b;
+    font-family: 'Droid Sans Mono', monospace;
+    font-weight: bold;
+}
+
+.Options h3 {
+    font-size: 1.4vw;
+    color: #130606
+}
+
+.Options button {
+    background: transparent;
+    border: 3px solid #090909;
+    margin-right: 10px;
+    padding: 0 15px;
+    border-radius: 0.2em;
+    font-family: 'Droid Sans Mono', monospace;
+    font-size: 1.4vw;
+    font-weight: bold;
+}
+
+.grid {
+    /*background: red*/
+    border-top: 2px solid #212121;
+    border-bottom: 2px solid #212121;
+    background: -moz-radial-gradient(center, ellipse cover, rgba(54,44,44,1) 0%, rgba(40,32,31,1) 29%, rgba(28,23,21,1) 55%, rgba(9,9,9,1) 100%); /* ff3.6+ */
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(54,44,44,1)), color-stop(29%, rgba(40,32,31,1)), color-stop(55%, rgba(28,23,21,1)), color-stop(100%, rgba(9,9,9,1))); /* safari4+,chrome */
+    background:-webkit-radial-gradient(center, ellipse cover, rgba(54,44,44,1) 0%, rgba(40,32,31,1) 29%, rgba(28,23,21,1) 55%, rgba(9,9,9,1) 100%); /* safari5.1+,chrome10+ */
+    background: -o-radial-gradient(center, ellipse cover, rgba(54,44,44,1) 0%, rgba(40,32,31,1) 29%, rgba(28,23,21,1) 55%, rgba(9,9,9,1) 100%); /* opera 11.10+ */
+    background: -ms-radial-gradient(center, ellipse cover, rgba(54,44,44,1) 0%, rgba(40,32,31,1) 29%, rgba(28,23,21,1) 55%, rgba(9,9,9,1) 100%); /* ie10+ */
+    background:radial-gradient(ellipse at center, rgba(54,44,44,1) 0%, rgba(40,32,31,1) 29%, rgba(28,23,21,1) 55%, rgba(9,9,9,1) 100%); /* w3c */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#362C2C', endColorstr='#090909',GradientType=1 ); /* ie6-9 */
+}
+
+.Options button:hover {
+    cursor: pointer;
+    border-color: #6e6e6e;
+}
+
+.dimCol, .dimRow, .intSettings{
+    width: 30%;
+    display: inline-block;
+}
+
+.dimCol h3, .dimRow h3, .intSettings h3, .dimCol input, dimRow input, intSettings input{
+    display: inline-block;
+}
+
+
