@@ -22,7 +22,7 @@ class Options extends React.Component {
                     <button name='pause' onClick={this.props.onClickPauseBtn} >Pause</button>
                     <button name='clear' onClick={this.props.onClickClearBtn} >Clear</button>
                     <button name='random' onClick={this.props.onClickRandomBtn} >Randomize</button>
-                    <h4><a href="https://github.com/periman2/GameOfLife" target="_blank">Github Repository</a><em>  Create by </em><a href="https://github.com/periman2" target="_blank">Periklis Arnaoutis</a></h4>
+                    <h4><a href="https://github.com/periman2/GameOfLife" target="_blank">Github Repository</a><em>  Created by </em><a href="https://github.com/periman2" target="_blank">Periklis Arnaoutis</a></h4>
                 </div>
             </div>
         )
